@@ -1,0 +1,10 @@
+{
+	"domain":{
+		"prd":"https://xxx.jp/"
+		,"test":"http://dev.xxx.jp"
+		,"local":""
+	}
+	, "index": {
+		"title":"index title"
+	}
+}
