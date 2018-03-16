@@ -3,14 +3,13 @@ Copyright (c) 2017 iizuka
 
 This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
-
-コピーするときはこのlicenseコメント残してください
 */
 
 var gulp=require("gulp")
 ,concat=require("gulp-concat")
 ,print=require('gulp-print')
-,config = require('../config');
+,configFilePath = require('../configFile')
+,config = require(configFilePath);
 
 gulp.task("concat", function() {
 	for(var i=0; i<config.concat.list.length; i++) {

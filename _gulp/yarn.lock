@@ -3266,6 +3266,10 @@ gulplog@^1.0.0:
   dependencies:
     glogg "^1.0.0"
 
+hammerjs@^2.0.0:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
+
 handlebars@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-1.3.0.tgz#9e9b130a93e389491322d975cf3ec1818c37ce34"
@@ -4819,6 +4823,12 @@ multipipe@^0.1.2:
 mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
+
+muuri@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/muuri/-/muuri-0.5.2.tgz#c206392113e0f7578580552219c8fad6a8e0ec13"
+  dependencies:
+    hammerjs "^2.0.0"
 
 nan-x@^1.0.0:
   version "1.0.0"

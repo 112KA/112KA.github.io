@@ -1,5 +1,5 @@
 # Node #
-/_gulp/node_modules/
+/**/node_modules
 
 # precompress images
 /_develop/**/image

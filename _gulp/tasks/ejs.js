@@ -3,8 +3,6 @@ Copyright (c) 2017 iizuka
 
 This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
-
-コピーするときはこのlicenseコメント残してください
 */
 
 var gulp=require("gulp")
@@ -12,7 +10,8 @@ var gulp=require("gulp")
 ,changed=require('gulp-changed')
 ,ejs=require("gulp-ejs")
 ,fs=require('fs')
-,config = require('../config');
+,configFilePath = require('../configFile')
+,config = require(configFilePath);
 
 
 gulp.task("ejs", function() {

@@ -3,8 +3,6 @@ Copyright (c) 2017 iizuka
 
 This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
-
-コピーするときはこのlicenseコメント残してください
 */
 
 
@@ -16,7 +14,8 @@ const rename=require('gulp-rename');
 const uglify=require('gulp-uglify')
 const ignore = require('gulp-ignore');
 
-var config = require('../config');
+const configFilePath = require('../configFile')
+,config = require(configFilePath);
 
 // タスクの定義。 ()=> の部分はfunction() でも可
 gulp.task("webpack", () => {

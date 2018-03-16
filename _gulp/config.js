@@ -76,7 +76,7 @@ module.exports = {
 			// メインとなるJavaScriptファイル（エントリーポイント）
 			entry: {
 				"assets/js/app":"../_develop/assets/js/main.js"
-				, "crashroyale/assets/js/app":"../_develop/crashroyale/assets/js/main.js"
+				, "deckhub/assets/js/app":"../_develop/deckhub/assets/js/main.js"
 			},
 			output: {
 				// 出力ファイル名

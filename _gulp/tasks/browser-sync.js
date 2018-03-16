@@ -3,13 +3,12 @@ Copyright (c) 2017 iizuka
 
 This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
-
-コピーするときはこのlicenseコメント残してください
 */
 
 var gulp=require("gulp")
 ,browserSync=require("browser-sync")
-,config = require('../config');
+,configFilePath = require('../configFile')
+,config = require(configFilePath);
 
  
 gulp.task("browser-sync", function() {

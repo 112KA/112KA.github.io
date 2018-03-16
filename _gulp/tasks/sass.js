@@ -3,8 +3,6 @@ Copyright (c) 2017 iizuka
 
 This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
-
-コピーするときはこのlicenseコメント残してください
 */
 
 var gulp=require("gulp")
@@ -13,7 +11,8 @@ var gulp=require("gulp")
 ,plumber=require('gulp-plumber')
 ,pleeease=require('gulp-pleeease')
 ,print=require('gulp-print')
-,config = require('../config');
+,configFilePath = require('../configFile')
+,config = require(configFilePath);
 
 
 
