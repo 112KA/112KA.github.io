@@ -22,6 +22,7 @@
 	    	height: 100%;
 	    	width: 100%;
             margin: 0; padding: 0;
+            background: #eee;
         }
         
         /* html {
@@ -46,7 +47,7 @@
 
 	    .xslider-view {
             color: white;
-            background: #ffd700;
+            /* background: #ffd700; */
             text-align: center;
 			font: italic normal 700 normal 16px/23px "Noto Sans", sans-serif;
 	    }
@@ -95,7 +96,6 @@
             <div class="xslider-view">
                 <div class="xslider-slide">
                     <div class="xslider-layer-gl" style="background: linear-gradient(to right bottom, #051937, #323851, #595a6d, #81808a, #a8a8a8);"></div>
-                    <!-- <div class="xslider-layer-gl" style="background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)"></div> -->
                     <div class="xslider-layer-ui">
                         <div class="layer-content">
                             <h1>XSlider</h1>
@@ -129,6 +129,7 @@
                     </div>
                 </div>
                 <div class="xslider-slide">
+                    <div class="xslider-layer-gl" style="background: #ffd700;"></div>
                     <div class="xslider-layer-ui"><p>Enjoy!</p></div>
                 </div>
             </div>
@@ -137,7 +138,7 @@
             <div class="xslider-next"></div>
         </div>
     </div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/92/three.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/92/three.min.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.2/dat.gui.js"></script>
     <script src="../dist/xslider.min.js"></script>
     <script>
@@ -180,7 +181,7 @@
     var buildOptions = function() {
         return {
             // debug: XSlider.Debug.DISPLAY_SVG,
-            transition: XSlider.transition[target.transition],
+            transition: XSlider[target.transition+"Transition"],
             loop : target.loop,
             touchMove : target.touchMoveEnabled ? {
                 throwable : target.throwable
@@ -233,12 +234,6 @@
             });
 
         });
-
-
-
-    // new XSlider(".xslider", {
-    //     transition: XSlider.transition.PixelateWipe
-    // });
 
     </script>
 </body>
