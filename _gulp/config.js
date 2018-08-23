@@ -9,7 +9,7 @@ http://opensource.org/licenses/mit-license.php
 
 var _src = "../_develop/",
 _libs = "../_libs/",
-_dst = "../htdocs/"
+_dst = "../"
 ,path = require('path')
 ,packageImporter = require('node-sass-package-importer');
 
@@ -23,7 +23,7 @@ module.exports = {
 		} 
 	},
 	watch:{
-		root:_dst+"**/*.+(css||js||html||php)",
+		root:[_dst+"/deckhub/**/*.+(css||js||html||php)"],
 		options: {
 			interval:500,
 			debounceDelay:10000
