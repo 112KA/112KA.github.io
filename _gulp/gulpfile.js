@@ -6,19 +6,18 @@ http://opensource.org/licenses/mit-license.php
 */
 
 
-var gulp=require("gulp")
-,requireDir=require("require-dir"); 
+var gulp = require("gulp")
+	, requireDir = require("require-dir")
 
 // ディレクトリ以下を再帰的に検索
-requireDir("./tasks", { recurse: true });
+requireDir("./tasks", { recurse: true })
 
-var tasks = [
-	'browser-sync',
+gulp.task('default', gulp.parallel(
 	'watch',
 	'sass',
-	'webpack',
-	'imagemin'
-	,'ejs','ejsAll'
+	// 'webpack',
+	'imagemin',
+	'browser-sync',
+	// ,'ejs','ejsAll'
 	// ,'concat'	//concat使うときはgulp-concatをnpm install
-];
-gulp.task("default", tasks);
+))

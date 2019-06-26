@@ -6,12 +6,10 @@ http://opensource.org/licenses/mit-license.php
 */
 
 var gulp=require("gulp")
-,imagemin=require('gulp-imagemin')
-,changed=require('gulp-changed')
 // ,pngquant=require('imagemin-pngquant')
 ,mozjpeg  = require('imagemin-mozjpeg')
-,configFilePath = require('../configFile')
-,config = require(configFilePath);
+,config = require('../config')
+,imagemin = config.$.imagemin;
 
 gulp.task( 'imagemin', function(){
 	var options = [
@@ -24,7 +22,7 @@ gulp.task( 'imagemin', function(){
 	];
 
   gulp.src( config.imagemin.src )
-    .pipe(changed( config.imagemin.dst ))
+    .pipe(config.$.changed( config.imagemin.dst ))
     .pipe(imagemin(options))
     .pipe(gulp.dest( config.imagemin.dst ));
 });
@@ -40,7 +38,7 @@ gulp.task( 'imagemin-optimize', function(){
 	];
 
   gulp.src( config.imagemin.src )
-    .pipe(changed( config.imagemin.dst ))
+    .pipe(config.$.changed( config.imagemin.dst ))
     .pipe(imagemin(options))
     .pipe(gulp.dest( config.imagemin.dst ));
 });

@@ -5,21 +5,18 @@ This software is released under the MIT License.
 http://opensource.org/licenses/mit-license.php
 */
 
-var gulp=require("gulp")
-// ,concat=require("gulp-concat")
-// ,print=require('gulp-print')
-,configFilePath = require('../configFile')
-,config = require(configFilePath);
+var gulp = require("gulp")
+    , config = require('../config');
 
-gulp.task('watch',function(){
-    gulp.watch(config.watch.root,config.watch.options,["reload"]);
-    // gulp.watch(config.sass.src,config.watch.options,["sass"]);
+gulp.task('watch', function () {
+    gulp.watch(config.watch.root, gulp.task("reload"));
+    gulp.watch(config.sass.src, gulp.series("sass", "html"));
 
-    // // gulp.watch(config.concat.src, config.watch.options,  ["concat"]);
-    // gulp.watch(config.webpack.src, config.watch.options,  ["webpack"]);
+    // gulp.watch(config.concat.src,  gulp.task("concat"));
+    gulp.watch(config.webpack.src, gulp.series("webpack", "html"));
 
-    // gulp.watch(config.ejs.src, config.watch.options,  ["ejs"]);
-    // gulp.watch(config.ejs.srcAll, config.watch.options,  ["ejsAll"]);
+    gulp.watch(config.ejs.src, gulp.task("ejs"));
+    gulp.watch(config.ejs.srcAll, gulp.task("ejsAll"));
 
-    // gulp.watch(config.imagemin.src, config.imagemin.options,  ["imagemin"]);
+    gulp.watch(config.imagemin.src, gulp.task("imagemin"));
 });
