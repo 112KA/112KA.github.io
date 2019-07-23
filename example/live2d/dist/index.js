@@ -13390,7 +13390,7 @@ var SkywayMain = /** @class */ (function () {
                         // start video
                         localVideo.play().catch(console.error);
                         peer = new skyway_js__WEBPACK_IMPORTED_MODULE_0___default.a({
-                            key: window.__SKYWAY_KEY__,
+                            key: '88026fc8-b1b9-472d-801d-491c1f575443',//window.__SKYWAY_KEY__,
                             debug: 3,
                         });
                         // Register caller handler
