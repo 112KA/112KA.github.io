@@ -21,7 +21,7 @@
             <div class="remote-stream">
                 <div class="video-container">
                     <div>
-                        <video id="js-remote-stream" width="200" height="150"></video>
+                        <video id="js-remote-stream" width="200" height="150" autoplay　playsinline="true"></video>
                         <canvas id="overlay" width="200" height="150"></canvas>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
 
             <div class="local-stream">
                 <div>
-                    <video id="js-local-stream" width="300" height="225"></video>
+                    <video id="js-local-stream" width="300" height="225" autoplay　playsinline="true"></video>
                 </div>
                 <p>Your ID: <span id="js-local-id"></span></p>
                 <input type="text" placeholder="Remote Peer ID" id="js-remote-id">
@@ -45,11 +45,13 @@
         </div>
     </main>
 
+    <div id="debug">a</div>
+
     <!-- Promise-polyfill -->
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js "> </script>
 
     <!-- Live2DCubismCore -->
-    <script src="live2dcubismcore.min.js"></script>
+    <script src="../Core/live2dcubismcore.min.js"></script>
 
     <!-- <script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script> -->
     <script src="_shared/key.js"></script>
