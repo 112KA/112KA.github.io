@@ -131,8 +131,10 @@
           case "addframe":
             var nProgress = ~~((e.data.nEncoded / nAdded) * 100);
             progress.setAttribute("value", nProgress);
+            console.log("addframe", e.data.nEncoded, nAdded);
             break;
           case "finalize":
+            console.log("finalize", e.data.encoded);
             download(
               URL.createObjectURL(
                 new Blob([e.data.encoded], { type: "video/mp4" })
